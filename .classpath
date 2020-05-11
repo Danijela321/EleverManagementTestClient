@@ -3,5 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_221"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/wildfly-19.0.0.Final/bin/client/jboss-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ivana/eclipse-workspace/EleverManagementServerApplication/dist/EleverManagementServerClasses.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
