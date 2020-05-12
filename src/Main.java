@@ -8,6 +8,8 @@ import javax.naming.NamingException;
 import com.yrgo.domain.Elever;
 import com.yrgo.elevermanagement.EleverManagementService;
 
+
+
 /**
  * 
  * @author Danijela
@@ -28,8 +30,26 @@ public class Main {
 		EleverManagementService service = (EleverManagementService) jndi.lookup(
 				"EleverManagementServerApplication/EleverManagementImplementation!com.yrgo.elevermanagement.EleverManagementService");
 
+		 Elever el2=new Elever("Michael", "Henriksson","Yrgo",1);
+		 Elever el3= new Elever("Mate", "Lundqvist", "ITH",2);
+		 Elever el4= new Elever ("Mike", "Pedersson", "ITH",1);
+		 Elever el5 = new Elever("Mark","Lundqvist","Yrgo",2);
+		
+		 service.registerElever(el2);
+		 service.registerElever(el3);
+		 service.registerElever(el4);
+		 service.registerElever(el5);
+		
+		
 		List<Elever> elever = service.getAllElever();
 		for (Elever eleverna : elever) {
+			System.out.println(eleverna);
+		}
+		
+		System.out.println("\n\n");
+		
+		List<Elever> eleverSurname = service.searchBysurname("Lundqvist");
+		for (Elever eleverna : eleverSurname) {
 			System.out.println(eleverna);
 		}
 
