@@ -8,13 +8,19 @@ import javax.naming.NamingException;
 import com.yrgo.domain.Elever;
 import com.yrgo.elevermanagement.EleverManagementService;
 
+
+
+
+
+
+
 /**
  * @author Danijela
  */
 
 public class Main {
 
-	public static void main(String[] args) throws NamingException {
+	public static void main(String[] args) throws NamingException{
 
 		Properties jndiProperties = new Properties();
 
@@ -23,8 +29,8 @@ public class Main {
 		jndiProperties.put("jboss.naming.client.ejb.context", true);
 
 		Context jndi = new InitialContext(jndiProperties);
-		EleverManagementService service = (EleverManagementService) jndi.lookup(
-				"EleverManagementServerApplication/EleverManagementImplementation!com.yrgo.elevermanagement.EleverManagementService");
+		
+		EleverManagementService service = (EleverManagementService) jndi.lookup("EleverManagementServerApplication/EleverManagementImplementation!com.yrgo.elevermanagement.EleverManagementService");
 
 		Elever el2 = new Elever("Michael", "Henriksson", "Yrgo", 1);
 		Elever el3 = new Elever("Mate", "Lundqvist", "ITH", 2);
