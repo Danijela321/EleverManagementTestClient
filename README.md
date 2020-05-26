@@ -1,0 +1,2 @@
+# EleverManagementTestClient
+Instruktion finns i EleverManagementServiceApplication
