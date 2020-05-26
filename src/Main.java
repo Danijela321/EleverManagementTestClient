@@ -15,7 +15,7 @@ import com.yrgo.elevermanagement.EleverManagementService;
 
 
 /**
- * @author Danijela
+ * @author danijela
  */
 
 public class Main {
@@ -32,10 +32,10 @@ public class Main {
 		
 		EleverManagementService service = (EleverManagementService) jndi.lookup("EleverManagementServerApplication/EleverManagementImplementation!com.yrgo.elevermanagement.EleverManagementService");
 
-		Elever el2 = new Elever("Michael15", "Henriksson", "Yrgo", 1);
-		Elever el3 = new Elever("Mate15", "Lundqvist", "ITH", 2);
-		Elever el4 = new Elever("Mike15", "Pedersson", "ITH", 1);
-		Elever el5 = new Elever("Mark15", "Lundqvist", "Yrgo", 2);
+		Elever el2 = new Elever("Michael16", "Henriksson", "Yrgo", 1);
+		Elever el3 = new Elever("Mate16", "Lundqvist", "ITH", 2);
+		Elever el4 = new Elever("Mike16", "Pedersson", "ITH", 1);
+		Elever el5 = new Elever("Mark16", "Lundqvist", "Yrgo", 2);
 
 		try {
 			service.registerElever(el2);
@@ -51,14 +51,15 @@ public class Main {
 		for (Elever eleverna : elever) {
 			System.out.println(eleverna);
 		}
-
-		System.out.println("\n\n");
+		//aktivera när använder  production version
+	/*System.out.println("\n\n");
 		System.out.println("I databas finns dessa elever med efternamn Lundqvist:\n");
 
 		List<Elever> eleverSurname = service.searchBysurname("Lundqvist");
 		for (Elever eleverna : eleverSurname) {
 			System.out.println(eleverna);
 		}
+		*/
 
 	}
 
