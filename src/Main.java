@@ -32,10 +32,10 @@ public class Main {
 		
 		EleverManagementService service = (EleverManagementService) jndi.lookup("EleverManagementServerApplication/EleverManagementImplementation!com.yrgo.elevermanagement.EleverManagementService");
 
-		Elever el2 = new Elever("Michael16", "Henriksson", "Yrgo", 1);
-		Elever el3 = new Elever("Mate16", "Lundqvist", "ITH", 2);
-		Elever el4 = new Elever("Mike16", "Pedersson", "ITH", 1);
-		Elever el5 = new Elever("Mark16", "Lundqvist", "Yrgo", 2);
+		Elever el2 = new Elever("Michael20", "Henriksson", "Yrgo", 1);
+		Elever el3 = new Elever("Mate20", "Lundqvist", "ITH", 2);
+		Elever el4 = new Elever("Mike20", "Pedersson", "ITH", 1);
+		Elever el5 = new Elever("Mark20", "Lundqvist", "Yrgo", 2);
 
 		try {
 			service.registerElever(el2);
